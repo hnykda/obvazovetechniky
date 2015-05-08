@@ -1,0 +1,142 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title></title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<style>
+body {
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+</style>
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/main.css">
+
+<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+</head>
+<body>
+	<!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav">
+
+				<li><a class="active"
+					onclick="majorChange('uvod.html')" href="javascript:;">Úvod</a></li>
+
+				<li><a class="active"
+					onclick="majorChange('teorie.html')" href="javascript:;">Teoretická východiska</a></li>
+					<li><a class="active"
+					onclick="majorChange('praxe.html')" href="javascript:;">Hlavní část</a></li>
+
+<!-- 				<li><a onclick="majorChange('postava.html')" -->
+<!-- 					href="javascript:;">Postava</a></li> -->
+
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown">Typ obvazu<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+                        <li><a onclick="majorObvaz('hlava_kruh')">Kruhový obvaz hlavy</a></li>
+						<li><a onclick="majorObvaz('hipokratovacepicka')">Hippokratova čepička</a></li>
+						<li><a onclick="majorObvaz('ohlavka')">Ohlávkový obvaz hlavy</a></li>
+                        <li><a onclick="majorObvaz('prak_nos')">Prakový obvaz nosu</a></li>
+                        <li><a onclick="majorObvaz('prak_brada')">Prakový obvaz brady</a></li>
+						<li class="divider"></li>
+
+                        <li><a onclick="majorObvaz('prst')">Obvaz prstu</a></li>
+						<li><a onclick="majorObvaz('rukavicka')">Rukavičkový obvaz prstů</a></li>
+						<li><a onclick="majorObvaz('hoblina_predlokti')">Hoblinový obvaz předloktí</a></li>
+                        <li><a onclick="majorObvaz('preklad_predlokti')">Překládaný obvaz předloktí</a></li>
+                        <li><a onclick="majorObvaz('klas_ruka')">Klasový obvaz ruky</a></li>
+						<li><a onclick="majorObvaz('zaves')">Závěs horní končetiny</a></li>
+						<li class="divider"></li>
+
+						<li><a onclick="majorObvaz('klas_noha')">Klasový obvaz nohy</a></li>
+                        <li><a onclick="majorObvaz('zelva_vzestupny')">Želvový obvaz kolene rozbíhavý</a></li>
+                        <li><a onclick="majorObvaz('zelva_sestupny')">Želvový obvaz kolene sbíhavý</a></li>
+                        <li><a onclick="majorObvaz('hoblina_berce')">Hoblinový obvaz bérce</a></li>
+                        <li><a onclick="majorObvaz('klas_berce')">Modifikovaný klasový obvaz bérce</a></li>
+                                                <li><a onclick="majorObvaz('prekladany_berce')">Překládaný obvaz bérce</a></li>
+					</ul>
+				</li>
+			    <li><a class="active"
+					onclick="majorChange('bibliografie.html')" href="javascript:;">Použité prameny</a></li>
+            </ul>
+		</div>
+		<!-- /.navbar-collapse -->
+			<script>
+        (function($){
+        	$(document).ready(function(){
+        		$('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+        			event.preventDefault();
+        			event.stopPropagation();
+        			$(this).parent().siblings().removeClass('open');
+        			$(this).parent().toggleClass('open');
+        		});
+        	});
+        })(jQuery);
+        </script>
+        <script>
+        $(".nav a").on("click", function(){
+        	   $(".nav").find(".active").removeClass("active");
+        	   $(this).parent().addClass("active");
+        	});
+        </script>
+	</nav>
+
+	<!-- container -->
+	<div class="container">
+		<div id="page-content-wrapper" class="row">
+
+		</div>
+	</div>
+	<!-- /container -->
+
+
+	<script
+		src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+	<script src="js/vendor/bootstrap.min.js"></script>
+
+	<script src="js/main.js"></script>
+	<script src="js/datab.js"></script>
+
+	<script>majorChange('uvod.html')</script>
+
+	<!-- google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45598913-6', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>
